@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>200</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0f2027, stop:0.5 #203a43, stop:1 #2c5364);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="10" column="5">
+    <widget class="QComboBox" name="comboBox_language">
+     <property name="maximumSize">
+      <size>
+       <width>150</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox#comboBox_language {
+    background-color: #ffffff;
+    color: #2c5364;  /* Tema ile uyumlu koyu mavi */
+    border: 2px solid #2c5364;
+    border-radius: 5px;
+    padding: 4px;
+    min-width: 10px;
+    font-weight: bold;
+}
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    color: #2c5364;
+    selection-background-color: #203a43;
+    selection-color: white;
+}
+</string>
+     </property>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Türkçe</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>English</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dutch</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Français</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>العربية</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Español</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Deutsch</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Русский</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>简体中文</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_username">
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="placeholderText">
+      <string>Username</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="3">
+    <widget class="QLineEdit" name="lineEdit_password">
+     <property name="focusPolicy">
+      <enum>Qt::ClickFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string notr="true">Password</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" colspan="5">
+    <widget class="QLabel" name="label_status">
+     <property name="maximumSize">
+      <size>
+       <width>550</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QLabel" name="label_forgotpassword">
+     <property name="styleSheet">
+      <string notr="true">color: red;
+font-weight: bold;
+text-decoration: underline;</string>
+     </property>
+     <property name="text">
+      <string>&lt;a href='#'&gt;Forgot Password?&lt;/a&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QCheckBox" name="checkBox_rememberme">
+     <property name="styleSheet">
+      <string notr="true">QCheckBox {
+    color: white;  /* Yazı rengini buradan ayarlarsın */
+    font-weight: bold;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Remember me</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLabel" name="label_userresim">
+     <property name="maximumSize">
+      <size>
+       <width>101</width>
+       <height>101</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/userresim.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="3">
+    <widget class="QLabel" name="label_logo">
+     <property name="maximumSize">
+      <size>
+       <width>295</width>
+       <height>71</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../images/logo.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QPushButton" name="pushButton_login">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #8b0000;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #b22222;
+    border-color: #8b0000;
+}
+
+QPushButton:pressed {
+    background-color: #4b0000;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="4">
+    <widget class="QLabel" name="label_language">
+     <property name="maximumSize">
+      <size>
+       <width>100</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#label_language {
+    color: white;
+    font-weight: bold;
+    font-size: 6pt;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>🌐Languages</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="6">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="3">
+    <widget class="QPushButton" name="pushButton_exit">
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #8b0000;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #b22222;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #b22222;
+    border-color: #8b0000;
+}
+
+QPushButton:pressed {
+    background-color: #4b0000;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
